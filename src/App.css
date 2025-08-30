@@ -1,0 +1,81 @@
+body {
+  background: #f4f6fb;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.post-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  padding: 32px 0;
+  margin: 0 auto;
+  justify-content: center;
+  max-width: 1200px;
+}
+
+.post-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.09);
+  padding: 28px 24px 20px 24px;
+  width: 300px;
+  list-style: none;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: transform 0.18s, box-shadow 0.18s;
+  border: 1px solid #e3e8ee;
+}
+
+.post-card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.13);
+  border-color: #b6c6e3;
+}
+
+.post-card p {
+  margin: 0 0 10px 0;
+  color: #222b45;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.post-card p:first-child {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #1976d2;
+  margin-bottom: 8px;
+}
+
+button {
+  margin-right: 10px;
+  margin-top: 8px;
+  padding: 7px 18px;
+  border: none;
+  border-radius: 5px;
+  background: #1976d2;
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.18s;
+  font-size: 0.97rem;
+}
+
+button:last-child {
+  background: #e53935;
+}
+
+button:hover {
+  opacity: 0.92;
+}
+
+.post-actions {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  gap: 10px;
+  margin-top: 12px;
+}
