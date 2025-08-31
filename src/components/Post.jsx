@@ -19,6 +19,10 @@ export const Posts = () => {
         getPostData(); // calling the function
     }, [])
 
+    const handleButtondlt = (id) => {
+        
+    }
+
     return (
         <div>
             <ul className="post-list">
@@ -30,7 +34,7 @@ export const Posts = () => {
                             <p>News :  {body}</p>
                             <div className="post-actions">
                                 <button>Edit</button>
-                                <button>Delete</button>
+                                <button onClick={() => handleButtondlt(id)}>Delete</button>
                             </div>
                         </li>
                     )
