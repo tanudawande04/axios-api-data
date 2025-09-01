@@ -21,3 +21,7 @@ export const addPost = (post) => {
     return api.post('/posts', post);   // jab bhi aap post method use karte ho tb aapko  "route" comma "payload" dena padta hai
 
 }
+
+export const updatePost = (id, post) => {
+    return api.put(`/posts/${id} `, post);   // jab bhi aap post method use karte ho tb aapko  "route" comma "payload" dena padta hai
+}
