@@ -7,6 +7,7 @@ import { Form } from "./Form";
 
 export const Posts = () => {
     const [data, setData] = useState([]);
+    const [updatedDataApi, setUpdatedDataApi] = useState({});
 
     console.log(getPost());
 
@@ -43,10 +44,13 @@ export const Posts = () => {
         }
     }
 
+    const handleButtonEdit = (currElem) => {
+        setUpdatedDataApi(currElem);
+    }
     return (
         <>
             <section className="section-form">
-                <Form data={data} setData={setData} />
+                <Form data={data} setData={setData} updatedDataApi={updatedDataApi} setUpdatedDataApi={setUpdatedDataApi} />
             </section>
             <section>
 
@@ -58,7 +62,7 @@ export const Posts = () => {
                                 <p>Title : {title}</p>
                                 <p>News :  {body}</p>
                                 <div className="post-actions">
-                                    <button>Edit</button>
+                                    <button onClick={() => handleButtonEdit(currElem)}>Edit</button>
                                     <button onClick={() => handleButtondlt(id)}>Delete</button>
                                 </div>
                             </li>
